@@ -1,20 +1,17 @@
+// Necessary for JSX elements
 import React from 'react';
+import MainContent from './MainContent';
+import Header from './Header';
+import Footer from './Footer';
 
 function HelloWorld(){
     return (
       <div class="center-text">
-        <h1><span class="badge bg-secondary">Martin Reyes</span></h1>
-        <p>This is my Hello World React script!</p>
-        <body>
-          My goals with this script are to:
-          <ul>
-            <li>Showcase my knowledge of React!</li>
-            <li>Build something from scratch!</li>
-            <li>Practice!</li>
-          </ul>
-        </body>
+        <Header />
+        <MainContent />
+        <Footer />
       </div>
-    )
+    );
   }
 
   export default HelloWorld;

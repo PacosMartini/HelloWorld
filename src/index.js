@@ -6,8 +6,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// extension is required e.g. ./HelloWorld.js vs ./HelloWorld
-import HelloWorld from './HelloWorld.js';
+// local imports
+import HelloWorld from './HelloWorld';
 
 // Render to page
 ReactDOM.render(
