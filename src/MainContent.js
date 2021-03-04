@@ -1,14 +1,29 @@
 import React from 'react';
 
 function MainContent(){
+    const introListItems = ['Showcase my knowledge of React!','Build something from scratch!', 'Practice!'];
+    const introListStrings = [];
+    const checkboxItems = ['Styling?', 'Multiple pages?', 'Pictures?'];
+    const checkboxStrings = [];
+
+    for (const [i,v] of checkboxItems.entries()){
+        checkboxStrings.push(<p><input type="checkbox" className="cb-margin"/>{v}</p>)
+    }
+
+    for (const [i,v] of introListItems.entries()){
+        introListStrings.push(<li>{v}</li>);
+    }
+
     return (
-        <body>My goals with this script are to:
+        <>
+            <p>My goals with this script are to:</p>
             <ul>
-            <li>Showcase my knowledge of React!</li>
-            <li>Build something from scratch!</li>
-            <li>Practice!</li>
+            {introListStrings}
             </ul>
-        </body>
+
+            <p>What else would you like to see?</p>
+            {checkboxStrings}
+        </>
     )
 }
 

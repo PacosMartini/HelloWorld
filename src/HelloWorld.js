@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 function HelloWorld(){
     return (
-      <div class="center-text">
+      <div className="center-text">
         <Header />
         <MainContent />
         <Footer />

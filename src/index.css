@@ -5,3 +5,7 @@
 ul {
   list-style-position: inside;
 }
+
+input.cb-margin{
+  margin-right: 5px;
+}
