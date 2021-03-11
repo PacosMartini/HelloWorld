@@ -7,7 +7,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // local imports
-import HelloWorld from './HelloWorld';
+import HelloWorld from './Components/HelloWorld';
 
 // Render to page
 ReactDOM.render(
