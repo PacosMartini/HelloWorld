@@ -12,10 +12,16 @@ function Clock(){
         padding         : "1px"
     }
 
+    if (hrs > 6 && hrs < 12){
+        inlineStyle.backgroundColor = "#43bf36";
+    } else if (hrs > 12 && hrs < 20){
+        inlineStyle.backgroundColor = "#3653e3";
+    }
+
     return(
         <>
         <div id="clock">
-            It is currently <span style={inlineStyle}>{hrs}:{mins}</span> CST (GMT -6)
+            It is currently <span style={inlineStyle}>{hrs}:{mins}</span>
         </div>
         </>
     )
