@@ -1,4 +1,5 @@
 import React from 'react';
+import Clock from './Clock';
 
 function MainContent(){
     const introListItems = ['Showcase my knowledge of React!','Build something from scratch!', 'Practice!'];
@@ -23,6 +24,8 @@ function MainContent(){
 
             <p>What else would you like to see?</p>
             {checkboxStrings}
+
+            <Clock/>
         </>
     )
 }
