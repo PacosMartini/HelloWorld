@@ -2,8 +2,8 @@ import React from 'react';
 
 function Clock(){
     const date = new Date();
-    const hrs = date.getHours();
-    const mins = date.getMinutes();
+    const hrs = date.getHours().toString().padStart(2, '0');
+    const mins = date.getMinutes().toString().padStart(2, '0');
     const inlineStyle = {
         backgroundColor : "#333",
         fontSize        : "15px",
