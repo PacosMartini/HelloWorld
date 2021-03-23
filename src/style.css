@@ -20,11 +20,23 @@ body {
     align-items : center;
 }
 
-input.radioButton{
+input.radioButton {
     margin-right: 5px;
 }
 
-img.optionImg{
+img.optionImg {
     width: 96px;
     height: 54px;
+}
+
+.center-text {
+    text-align:center;
+  }
+
+ul {
+    list-style-position: inside;
+}
+
+input.cb-margin {
+    margin-right: 5px;
 }
