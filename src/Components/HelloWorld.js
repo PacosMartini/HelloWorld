@@ -4,14 +4,20 @@ import MainContent from './MainContent';
 import Header from './Header';
 import Footer from './Footer';
 
-function HelloWorld(){
+class HelloWorld extends React.Component{
+  // constructor(props){
+  //   super(props);
+  // }
+
+  render() {
     return (
       <div className="center-text">
-        <Header />
-        <MainContent />
-        <Footer />
+        <Header key="Header" />
+        <MainContent key="MainContent" />
+        <Footer key="Footer" />
       </div>
     );
   }
+}
 
-  export default HelloWorld;
+export default HelloWorld;

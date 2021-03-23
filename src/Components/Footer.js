@@ -1,11 +1,17 @@
 import React from 'react'
 
-function Footer(){
-    return (
-        <>
-        <footer>Behold my footer!</footer>
-        </>
-    );
+class Footer extends React.Component{
+    // constructor(props){
+    //     super(props);
+    // }
+
+    render() {
+        return (
+            <>
+                <footer>Behold my footer!</footer>
+            </>
+        );
+    }
 }
 
 export default Footer;
