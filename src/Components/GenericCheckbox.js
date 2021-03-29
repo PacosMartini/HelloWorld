@@ -6,7 +6,7 @@ class GenericCheckbox extends React.Component{
     // }
 
     render() {
-        return(
+        return (
             <>
                 <p><input type="checkbox" className="cb-margin" />{this.props.value}</p>
             </>

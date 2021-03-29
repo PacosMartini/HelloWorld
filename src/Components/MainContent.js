@@ -11,7 +11,8 @@ class MainContent extends React.Component{
         super(props);
         this.state = {
             introListItems : ['Showcase my knowledge of React!', 'Build something from scratch!', 'Practice!'],
-            checkboxItems : ['Styling?', 'Multiple pages?', 'Pictures?']
+            checkboxItems : ['Styling?', 'Multiple pages?', 'Pictures?'],
+            imageItems : imageInfo
         }
     }
 
@@ -19,7 +20,7 @@ class MainContent extends React.Component{
         // Mapping UnorderedList Components
         const ULComponents = this.state.introListItems.map((info, index) => {
             return <GenericUnorderedList key={index} value={info} />
-        })
+        });
 
         // Mapping Checkbox Components
         const CheckboxComponents = this.state.checkboxItems.map( (info, index) => {
@@ -29,7 +30,7 @@ class MainContent extends React.Component{
         });
 
         // Mapping ImageCard Components
-        const ImageComponents = imageInfo.map(info => {
+        const ImageComponents = this.state.imageItems.map(info => {
             return (
                 <ImageCard key={info.id} url={info.url} description={info.description} />
             );
@@ -43,13 +44,19 @@ class MainContent extends React.Component{
                 </ul>
 
                 <p key="2">What else would you like to see?</p>
-                {CheckboxComponents}
+                <div id="checkboxComponents" className="center-text">
+                    <div className="left-align">
+                        {CheckboxComponents}
+                    </div>
+                </div>
 
-                {ImageComponents}
+                <div id="imageComponents">
+                    {ImageComponents}
+                </div>
 
                 <Clock />
             </>
-        )
+        );
     }
 }
 
