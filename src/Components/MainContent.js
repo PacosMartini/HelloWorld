@@ -4,14 +4,16 @@ import ImageCard from './ImageCard';
 import imageInfo from '../imageSrc'
 import GenericCheckbox from './GenericCheckbox';
 import GenericUnorderedList from './GenericUnorderedList';
+import introListItems from '../IntroListItems'
+import checkboxLabels from '../CheckboxLabels'
 
 // Class component MainContent (gives us access to state)
 class MainContent extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            introListItems : ['Showcase my knowledge of React!', 'Build something from scratch!', 'Practice!'],
-            checkboxItems : ['Styling?', 'Multiple pages?', 'Pictures?'],
+            introListItems : introListItems,
+            checkboxItems : checkboxLabels,
             imageItems : imageInfo
         }
     }
@@ -23,9 +25,9 @@ class MainContent extends React.Component{
         });
 
         // Mapping Checkbox Components
-        const CheckboxComponents = this.state.checkboxItems.map( (info, index) => {
+        const CheckboxComponents = this.state.checkboxItems.map((info, index) => {
             return (
-                <GenericCheckbox key={index} value={info} />
+                <GenericCheckbox key={index} value={info.text} onChangeFunction={info.checkFunction}/>
             );
         });
 
@@ -50,7 +52,7 @@ class MainContent extends React.Component{
                     </div>
                 </div>
 
-                <div id="imageComponents">
+                <div id="imageComponents" className="hidden">
                     {ImageComponents}
                 </div>
 

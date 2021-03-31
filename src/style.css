@@ -47,3 +47,7 @@ ul {
     list-style-position: inside;
     text-align: left;
 }
+
+.hidden{
+    display:none;
+}
