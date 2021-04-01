@@ -5,6 +5,7 @@ class GenericCheckbox extends React.Component{
         super(props);
         this.state = {
             id: this.props?.id,
+            checked: this.props?.checked,
             value: this.props?.value,
             onChangeFunction : this.props?.checkFunction?.bind(this)
         }
@@ -22,6 +23,7 @@ class GenericCheckbox extends React.Component{
                         id={this.state.id}
                         type="checkbox"
                         className="cb-margin"
+                        defaultChecked={this.state?.checked}
                         onChange={this.state?.onChangeFunction}/>
                     {this.state.value}
                 </p>

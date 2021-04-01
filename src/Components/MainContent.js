@@ -30,6 +30,7 @@ class MainContent extends React.Component{
                 <GenericCheckbox key={info.id}
                     id={info.id}
                     value={info.text}
+                    checked={info.checked}
                     onChangeFunction={info.checkFunction}/>
             );
         });
