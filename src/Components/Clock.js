@@ -6,12 +6,24 @@ class Clock extends React.Component{
         let date = new Date();
         let hrs = date.getHours().toString().padStart(2, '0');
         let mins = date.getMinutes().toString().padStart(2, '0');
+        let seconds = date.getSeconds().toString().padStart(2, '0');
 
         this.state = {
             date,
             hrs,
-            mins
+            mins,
+            seconds
         }
+    }
+
+    componentDidMount(){
+        setInterval(() => {
+            let date = new Date();
+            let hrs = date.getHours().toString().padStart(2, '0');
+            let mins = date.getMinutes().toString().padStart(2, '0');
+            let seconds = date.getSeconds().toString().padStart(2, '0');
+            this.setState({ hrs, mins, seconds });
+        }, 1000);
     }
 
     render() {
@@ -28,7 +40,7 @@ class Clock extends React.Component{
             return (
                 <>
                     <div id="clock">
-                        It is currently <span style={inlineStyle}>{this.state.hrs}:{this.state.mins}</span>
+                        It is currently <span style={inlineStyle}>{this.state.hrs}:{this.state.mins}:{this.state.seconds}</span>
                     </div>
                 </>
             )
@@ -39,7 +51,7 @@ class Clock extends React.Component{
             return (
                 <>
                     <div id="clock">
-                        It is currently <span style={inlineStyle}>{this.state.hrs}:{this.state.mins}</span>
+                        It is currently <span style={inlineStyle}>{this.state.hrs}:{this.state.mins}:{this.state.seconds}</span>
                     </div>
                 </>
             )
@@ -48,7 +60,7 @@ class Clock extends React.Component{
         return (
             <>
                 <div id="clock">
-                    It is currently {this.state.hrs}:{this.state.mins}
+                    It is currently {this.state.hrs}:{this.state.mins}:{this.state.seconds}
                 </div>
             </>
         )
