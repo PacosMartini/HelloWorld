@@ -15,7 +15,7 @@ class MainContent extends React.Component{
             introListItems : introListItems,
             checkboxItems : checkboxLabels,
             imageItems : imageInfo
-        }
+        };
     }
 
     render(){
@@ -27,7 +27,10 @@ class MainContent extends React.Component{
         // Mapping Checkbox Components
         const CheckboxComponents = this.state.checkboxItems.map((info, index) => {
             return (
-                <GenericCheckbox key={index} value={info.text} onChangeFunction={info.checkFunction}/>
+                <GenericCheckbox key={info.id}
+                    id={info.id}
+                    value={info.text}
+                    onChangeFunction={info.checkFunction}/>
             );
         });
 
@@ -53,6 +56,7 @@ class MainContent extends React.Component{
                 </div>
 
                 <div id="imageComponents" className="hidden">
+                    <p>Sure thing!</p>
                     {ImageComponents}
                 </div>
 

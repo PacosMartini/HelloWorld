@@ -1,8 +1,9 @@
-const checkboxLabels = [{text: 'Styling?'},
-    {text: 'Multiple pages?'},
-    {text: 'Pictures?', checkFunction: () => {
+const checkboxLabels = [{id: "stylingCheckbox", text: 'Styling?'},
+    {id:"multiPageCheckbox", text: 'Multiple pages?'},
+    {id: "pictureCheckbox", text: 'Pictures?', checkFunction: () => {
         const imageComponent = document.getElementById("imageComponents");
-        imageComponent.classList.contains("hidden")
+        const checkbox = document.getElementById("pictureCheckbox")
+        checkbox.checked
             ? imageComponent.classList.remove("hidden")
             : imageComponent.classList.add("hidden");
 }}]
