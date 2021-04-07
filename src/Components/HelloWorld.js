@@ -1,8 +1,8 @@
 // Necessary for JSX elements
 import React from 'react';
-import MainContent from './MainContent';
 import Header from './Header';
 import Footer from './Footer';
+import MainContentContainer from './MainContentContainer';
 
 class HelloWorld extends React.Component{
   // constructor(props){
@@ -13,7 +13,7 @@ class HelloWorld extends React.Component{
     return (
       <div className="center-text">
         <Header key="Header" />
-        <MainContent key="MainContent" />
+        <MainContentContainer key="MainContent" />
         <Footer key="Footer" />
       </div>
     );
