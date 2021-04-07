@@ -1,5 +1,5 @@
 import React from 'react';
-import Clock from './Clock';
+import MainContent from './MainContent';
 import ImageCard from './ImageCard';
 import imageInfo from '../imageSrc'
 import GenericCheckbox from './GenericCheckbox';
@@ -8,7 +8,7 @@ import introListItems from '../IntroListItems'
 import checkboxLabels from '../CheckboxLabels'
 
 // Class component MainContent (gives us access to state)
-class MainContent extends React.Component{
+class MainContentContainer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -42,29 +42,14 @@ class MainContent extends React.Component{
             );
         });
 
-        return (
-            <>
-                <p key="1">My goals with this script are to:</p>
-                <ul>
-                    {ULComponents}
-                </ul>
-
-                <p key="2">What else would you like to see?</p>
-                <div id="checkboxComponents" className="center-text">
-                    <div className="left-align">
-                        {CheckboxComponents}
-                    </div>
-                </div>
-
-                <div id="imageComponents" className="hidden">
-                    <p>Sure thing!</p>
-                    {ImageComponents}
-                </div>
-
-                <Clock />
-            </>
-        );
+        return(
+            <MainContent
+                unorderedListComponents = {ULComponents}
+                checkboxComponents = {CheckboxComponents}
+                imageComponents = {ImageComponents}
+            />
+        )
     }
 }
 
-export default MainContent;
+export default MainContentContainer;
